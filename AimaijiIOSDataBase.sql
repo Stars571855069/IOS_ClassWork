@@ -11,11 +11,34 @@
  Target Server Version : 80013
  File Encoding         : 65001
 
- Date: 05/01/2019 15:25:39
+ Date: 06/01/2019 16:07:39
 */
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
+
+-- ----------------------------
+-- Table structure for comment
+-- ----------------------------
+DROP TABLE IF EXISTS `comment`;
+CREATE TABLE `comment` (
+  `commentuser` varchar(255) NOT NULL,
+  `commentdate` datetime(6) NOT NULL,
+  `comment` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `commentuserphoto` varchar(255) DEFAULT NULL,
+  `commentid` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`commentid`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- ----------------------------
+-- Records of comment
+-- ----------------------------
+BEGIN;
+INSERT INTO `comment` VALUES ('lixingyu', '2019-01-06 12:09:20.000000', '1111111111112', 'default.png', 5);
+INSERT INTO `comment` VALUES ('lixingyu', '2019-01-06 12:25:39.000000', '222222222222222222', 'default.png', 6);
+INSERT INTO `comment` VALUES ('Assad', '2019-01-06 12:31:16.000000', '1111111', 'default.png', 7);
+INSERT INTO `comment` VALUES ('Assad', '2019-01-06 12:41:06.000000', 'Aaa', 'default.png', 8);
+COMMIT;
 
 -- ----------------------------
 -- Table structure for iteminfo
@@ -88,7 +111,7 @@ INSERT INTO `usercart` VALUES ('iPhone 8 Plus', 'iphone8plus.jpg', 7220, 'lixing
 INSERT INTO `usercart` VALUES ('iPhone X', 'Item2.jpg', 9999, 'lixingyu');
 INSERT INTO `usercart` VALUES ('Samsung Note 8', 'note8.jpg', 7388, 'lixingyu');
 INSERT INTO `usercart` VALUES ('Samsung S9', 'Samsungs9.jpg', 6699, 'lixingyu');
-INSERT INTO `usercart` VALUES ('小米 8', 'XIAOMI8.jpg', 2699, 'lixingyu');
+INSERT INTO `usercart` VALUES ('小米MIX 2S', 'XIAOMIMIX2S.jpg', 3299, 'Assad');
 INSERT INTO `usercart` VALUES ('小米MIX 2S', 'XIAOMIMIX2S.jpg', 3299, 'lixingyu');
 INSERT INTO `usercart` VALUES ('小米MIX 2S', 'XIAOMIMIX2S.jpg', 3299, 'sunyifeng');
 INSERT INTO `usercart` VALUES ('红米6 Pro', 'REDMI.jpg', 1299, 'lixingyu');
