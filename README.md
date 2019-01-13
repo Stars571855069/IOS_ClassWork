@@ -1,3 +1,3 @@
 # IOS_ClassWork
-Only for Personal IOSClass work
-//These files are only for personal classwork
+Only for Personal IOSClass work，these files may not change for now.
+
